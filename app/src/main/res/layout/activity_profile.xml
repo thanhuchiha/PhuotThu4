@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="12">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:weightSum="230"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#EA0000">
+
+        <Button
+            android:layout_marginRight="@dimen/margin_left_rigt"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:id="@+id/btn_back"
+            android:background="@drawable/back"
+            android:layout_width="30dp"
+            android:layout_height="30sp"
+            />
+        <TextView
+            android:id="@+id/tv_name_profile"
+            android:layout_weight="229"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/tv_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableBottom="@drawable/iconcamera"
+            android:gravity="center"
+            android:text="Hình ảnh" />
+
+        <TextView
+            android:id="@+id/tv_cmt"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableBottom="@drawable/iconcomment"
+            android:gravity="center"
+            android:text="Bình luận" />
+
+        <TextView
+            android:id="@+id/tv_save"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableBottom="@drawable/save"
+            android:gravity="center"
+            android:text="Lưu lại" />
+
+        <TextView
+            android:id="@+id/tv_share"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableBottom="@drawable/iconshare"
+            android:gravity="center"
+            android:text="Chia sẻ" />
+
+    </LinearLayout>
+
+    <ImageView
+            android:layout_weight="5"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/dailanh"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+    <TextView
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:gravity="center_vertical"
+        android:text="Mũi Đại Lãnh (Mũi Điện)"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+
+    </RelativeLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <TextView
+            android:drawableLeft="@drawable/checkin"
+            android:textSize="20sp"
+            android:gravity="center_vertical"
+            android:text=" Đông Hòa, Khánh Hòa"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:src="@drawable/mapdailanh"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+
+</LinearLayout>

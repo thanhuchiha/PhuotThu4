@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="15"
+    tools:context="layout.baitap.com.phuotthu.Acticity.MainActivity"
+    >
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_weight="14"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"></FrameLayout>
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <TextView
+            android:drawableTop="@drawable/home"
+            android:id="@+id/tv_home"
+            android:layout_weight="1"
+            android:layout_width="@dimen/height_width_btn"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:drawableTop="@drawable/saved"
+            android:id="@+id/tv_saved"
+            android:layout_weight="1"
+            android:layout_width="@dimen/height_width_btn"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:drawableTop="@drawable/notification"
+            android:id="@+id/tv_notification"
+            android:layout_weight="1"
+            android:layout_width="@dimen/height_width_btn"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:drawableTop="@drawable/newaccount"
+            android:id="@+id/tv_account"
+            android:layout_weight="1"
+            android:layout_width="@dimen/height_width_btn"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
