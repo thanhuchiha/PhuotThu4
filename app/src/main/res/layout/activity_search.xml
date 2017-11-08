@@ -16,7 +16,8 @@
         android:background="#EA0000">
 
 
-        <EditText
+        <AutoCompleteTextView
+            android:id="@+id/atc_tv"
             android:drawableLeft="@drawable/search"
             android:layout_gravity="center"
             android:background="@drawable/edt"

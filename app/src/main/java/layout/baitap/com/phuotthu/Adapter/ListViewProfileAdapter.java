@@ -13,19 +13,20 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import layout.baitap.com.phuotthu.Object.Place;
 import layout.baitap.com.phuotthu.R;
 
 /**
  * Created by DELL on 9/19/2017.
  */
 
-public class ListViewProfileAdapter extends ArrayAdapter<DiaDiem> {
+public class ListViewProfileAdapter extends ArrayAdapter<Place> {
 
     private Context contex;
     private int layout;
-    private ArrayList<DiaDiem> arrayList;
+    private ArrayList<Place> arrayList;
 
-    public ListViewProfileAdapter(@NonNull Context context, @LayoutRes int resource, @NonNull ArrayList<DiaDiem> objects) {
+    public ListViewProfileAdapter(@NonNull Context context, @LayoutRes int resource, @NonNull ArrayList<Place> objects) {
         super(context, resource, objects);
         this.contex=context;
         this.layout = resource;
@@ -40,7 +41,7 @@ public class ListViewProfileAdapter extends ArrayAdapter<DiaDiem> {
         TextView tv_address_diadiem = (TextView) convertView.findViewById(R.id.tv_address_diadiem);
         ImageView img_diadiem = (ImageView) convertView.findViewById(R.id.img_diadiem);
 
-        DiaDiem diadiem = arrayList.get(position);
+        Place diadiem = arrayList.get(position);
         tv_name_diadiem.setText(diadiem.getName());
         tv_address_diadiem.setText(diadiem.getAddress());
         img_diadiem.setImageResource(diadiem.getImage());
@@ -55,9 +56,9 @@ public class ListViewProfileAdapter extends ArrayAdapter<DiaDiem> {
 
     //    private Context context;
 //    private int layut;
-//    ArrayList<DiaDiem> arrayList;
+//    ArrayList<Place> arrayList;
 //
-//    public ListViewProfileAdapter(Context context, int layut, ArrayList<DiaDiem> arrayList) {
+//    public ListViewProfileAdapter(Context context, int layut, ArrayList<Place> arrayList) {
 //        this.context = context;
 //        this.layut = layut;
 //        this.arrayList = arrayList;
@@ -100,14 +101,14 @@ public class ListViewProfileAdapter extends ArrayAdapter<DiaDiem> {
 //            viewHolder = (ViewHolder) view.getTag();
 //        }
 //
-//        DiaDiem diaDiem = arrayList.get(i);
+//        Place diaDiem = arrayList.get(i);
 //        viewHolder.tv_address.setText(diaDiem.getName());
 //        viewHolder.tv_address.setText(diaDiem.getAddress());
 //        viewHolder.image.setImageResource(diaDiem.getImage());
 //        return view;
 //    }
 //
-//    public void addDiaDiem(DiaDiem diaDiem){
+//    public void addDiaDiem(Place diaDiem){
 //        arrayList.add(diaDiem);
 //    }
 

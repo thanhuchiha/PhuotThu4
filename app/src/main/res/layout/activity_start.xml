@@ -19,7 +19,7 @@
         android:gravity="center"
         android:layout_below="@id/image_avt"
         android:textSize="30sp"
-        android:text="Xin chào ..."
+        android:text="Xin chào"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <TextView
@@ -29,7 +29,6 @@
         android:gravity="center"
         android:layout_below="@id/tv_chao"
         android:textSize="20sp"
-        android:text="Đăng nhập để trải nghiệm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <Button

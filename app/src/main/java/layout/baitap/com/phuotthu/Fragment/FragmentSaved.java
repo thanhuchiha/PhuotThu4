@@ -6,11 +6,12 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
 
-import layout.baitap.com.phuotthu.Adapter.DiaDiem;
+import layout.baitap.com.phuotthu.Object.Place;
 import layout.baitap.com.phuotthu.Adapter.ListViewProfileAdapter;
 import layout.baitap.com.phuotthu.R;
 
@@ -20,7 +21,7 @@ import layout.baitap.com.phuotthu.R;
 
 public class FragmentSaved extends Fragment {
     ListView lv_saved;
-    ArrayList<DiaDiem> arrayList;
+    ArrayList<Place> arrayList;
 
     @Nullable
     @Override
@@ -30,12 +31,19 @@ public class FragmentSaved extends Fragment {
 
         View view = inflater.inflate(R.layout.activity_saved,container,false);
         lv_saved = (ListView) view.findViewById(R.id.lv_saved);
-        arrayList.add(new DiaDiem(R.drawable.dailanh,"Hải Đăng Đại Lãnh","Khánh Hòa"));
-        arrayList.add(new DiaDiem(R.drawable.dailanh,"abc","xyz"));
-        arrayList.add(new DiaDiem(R.drawable.dailanh,"def","ghk"));
+        arrayList.add(new Place(R.drawable.dailanh,"Hải Đăng Đại Lãnh","Khánh Hòa"));
+        arrayList.add(new Place(R.drawable.dailanh,"abc","xyz"));
+        arrayList.add(new Place(R.drawable.dailanh,"def","ghk"));
         ListViewProfileAdapter listViewProfileAdapter = new ListViewProfileAdapter(getContext(),R.layout.diadiem_layout,arrayList);
 
         lv_saved.setAdapter(listViewProfileAdapter);
+
+        lv_saved.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+            }
+        });
         return view;
     }
 }

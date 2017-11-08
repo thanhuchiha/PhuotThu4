@@ -1,10 +1,10 @@
-package layout.baitap.com.phuotthu.Adapter;
+package layout.baitap.com.phuotthu.Object;
 
 /**
  * Created by DELL on 9/19/2017.
  */
 
-public class DiaDiem {
+public class Place {
     private int image;
     private String name;
     private String address;
@@ -32,13 +32,13 @@ public class DiaDiem {
     public void setAddress(String address) {
         this.address = address;
     }
-    public DiaDiem(){
+    public Place(){
         this.name ="";
         this.address="";
         this.image=0;
     }
 
-    public DiaDiem(int image, String name, String address) {
+    public Place(int image, String name, String address) {
         this.image = image;
         this.name = name;
         this.address = address;
