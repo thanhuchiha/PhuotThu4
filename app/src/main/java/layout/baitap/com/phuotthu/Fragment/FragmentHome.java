@@ -33,6 +33,8 @@ public class FragmentHome extends Fragment {
             }
         });
 
+//        Intent intent = getIntent();
+
         return view;
     }
 }
