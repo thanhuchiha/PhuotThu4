@@ -29,30 +29,30 @@ public class LoginActivity extends AppCompatActivity {
     TextView tv_register;
     Button btnDangNhap;
     EditText edtEmail,edtPass;
- Database database ;//SQLiteDatabase.openDatabase();
-    ArrayList<User> userArr;
+//    Database database ;//SQLiteDatabase.openDatabase();
+//    ArrayList<User> userArr;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        userArr = new ArrayList<>();
-        selectDatabaseUser();
+//        userArr = new ArrayList<>();
+//        selectDatabaseUser();
         getWidget();
 
     }
-    private void selectDatabaseUser() {
-        // select data
-        Cursor dataUser = database.GetData("SELECT * FROM user");
-        while (dataUser.moveToNext()) {
-            int id = dataUser.getInt(0);
-            String username = dataUser.getString(1);
-            String password = dataUser.getString(2);
-            Toast.makeText(this, username, Toast.LENGTH_SHORT).show();
-            userArr.add(new User(id, username, password));
-        }
-
-    }
+//    private void selectDatabaseUser() {
+//        // select data
+//        Cursor dataUser = database.GetData("SELECT * FROM user");
+//        while (dataUser.moveToNext()) {
+//            int id = dataUser.getInt(0);
+//            String username = dataUser.getString(1);
+//            String password = dataUser.getString(2);
+//            Toast.makeText(this, username, Toast.LENGTH_SHORT).show();
+//            userArr.add(new User(id, username, password));
+//        }
+//
+//    }
 
     private void getWidget() {
         tv_register = (TextView) findViewById(R.id.tv_register);

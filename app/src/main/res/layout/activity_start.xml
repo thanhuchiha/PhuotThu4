@@ -6,7 +6,7 @@
 
     <ImageView
         android:id="@+id/image_avt"
-        android:background="@drawable/image"
+        android:background="@drawable/adminavt"
         android:layout_marginTop="50dp"
         android:layout_centerHorizontal="true"
         android:layout_width="100dp"
