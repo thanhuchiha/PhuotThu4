@@ -38,6 +38,7 @@ public class MainActivity extends FragmentActivity {
         Database database = new Database(this);
         //database.hello();
         //database.addUser(new User("Admin","12345"));
+        //database.addUser(new User("admin","12345"));
        // database.addDiaDiem(new DiaDiem("Asia Park","Asia Park là khu tổ hợp vui chơi giải trí lớn bậc nhất ở Đà Nẵng, với 3 hạng mục chính là công viên vui chơi giải trí, khu Sun Wheel (vòng quay mặt trời) và khu vui chơi trong nhà.","hinh1.jpg"));
         //userArr = database.getAllUser();
         //diadiemArr = database.getAllDiaDiem();
