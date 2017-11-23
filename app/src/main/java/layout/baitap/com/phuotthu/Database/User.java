@@ -9,8 +9,16 @@ public class User {
     private String UserName;
     private String PassWord;
 
+    public User(){
+
+    }
     public User(int id, String userName, String passWord) {
         Id = id;
+        UserName = userName;
+        PassWord = passWord;
+    }
+    public User( String userName, String passWord) {
+
         UserName = userName;
         PassWord = passWord;
     }

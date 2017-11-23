@@ -10,13 +10,22 @@ public class DiaDiem {
     private String diaDiem;
     private String chiTiet;
     private String hinhAnh;
+    public DiaDiem(){
 
+    }
+    public DiaDiem(String diaDiem, String chiTiet, String hinhAnh) {
+        this.diaDiem = diaDiem;
+        this.chiTiet = chiTiet;
+        this.hinhAnh = hinhAnh;
+    }
     public DiaDiem(int id, String diaDiem, String chiTiet, String hinhAnh) {
         this.id = id;
         this.diaDiem = diaDiem;
         this.chiTiet = chiTiet;
         this.hinhAnh = hinhAnh;
     }
+
+
 
     public int getId() {
         return id;

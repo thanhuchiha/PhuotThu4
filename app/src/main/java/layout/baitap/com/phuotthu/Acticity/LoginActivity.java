@@ -14,6 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import layout.baitap.com.phuotthu.Database.Database;
 import layout.baitap.com.phuotthu.Database.User;
@@ -29,6 +30,8 @@ public class LoginActivity extends AppCompatActivity {
     TextView tv_register;
     Button btnDangNhap;
     EditText edtEmail,edtPass;
+    Database database = new Database(this);
+    List<User> userArr;
 //    Database database ;//SQLiteDatabase.openDatabase();
 //    ArrayList<User> userArr;
 
@@ -36,36 +39,35 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-//        userArr = new ArrayList<>();
-//        selectDatabaseUser();
+
+        userArr = database.getAllUser();
+
         getWidget();
 
     }
-//    private void selectDatabaseUser() {
-//        // select data
-//        Cursor dataUser = database.GetData("SELECT * FROM user");
-//        while (dataUser.moveToNext()) {
-//            int id = dataUser.getInt(0);
-//            String username = dataUser.getString(1);
-//            String password = dataUser.getString(2);
-//            Toast.makeText(this, username, Toast.LENGTH_SHORT).show();
-//            userArr.add(new User(id, username, password));
-//        }
-//
-//    }
+
 
     private void getWidget() {
         tv_register = (TextView) findViewById(R.id.tv_register);
         btnDangNhap = (Button) findViewById(R.id.btnDangNhap);
         edtEmail = (EditText) findViewById(R.id.edtEmail);
         edtPass = (EditText) findViewById(R.id.edtPass);
-
+//        for(User user: userArr){
+//            Toast.makeText(LoginActivity.this,user.getUserName(),Toast.LENGTH_SHORT).show();
+//        }
         btnDangNhap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                for(User user: userArr){
+                    //Toast.makeText(LoginActivity.this,user.getUserName(),Toast.LENGTH_SHORT).show();
+                    if(user.getUserName().equals(edtEmail.getText().toString()) && user.getPassWord().equals(edtPass.getText().toString())){
+                        Toast.makeText(LoginActivity.this,user.getUserName(),Toast.LENGTH_SHORT).show();
+//                       Intent intent = new Intent(LoginActivity.this, FragmentHome.class);
+//                       startActivity(intent);
+                    }
+                }
 
-//                Intent intent = new Intent(LoginActivity.this, FragmentHome.class);
-//                startActivity(intent);
+//
             }
         });
 
